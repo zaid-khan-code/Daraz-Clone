@@ -12,7 +12,7 @@ const Helplinks = () => {
           Login
         </li>
         <li className="text-[14px] cursor-pointer" onClick={()=>setPopUp(true)}>
-          Sign Up{" "}
+          Sign Up
         </li>
         <li className="text-[14px] cursor-pointer">زبان تبدیل کریں</li>
       </ul>
