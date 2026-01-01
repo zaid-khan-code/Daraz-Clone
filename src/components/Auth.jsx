@@ -19,21 +19,16 @@ export default function Auth() {
             <button className="cursor-pointer px-3 ">Phone Number</button>
           </div>
           <form className="w-full flex flex-col gap-5 font-semibold text-sm justify-center items-center">
+            <div className="rounded-sm focus:outline-[#2f2ff0] placeholder:text-[#858b9c] px-4 py-3 w-[20%] font-medium max-w-max border border-[#cbced5]">
+              🇵🇰+92
+            </div>
             <input
               className="rounded-sm focus:outline-[#2f2ff0] placeholder:text-[#858b9c] px-4 py-3 w-[80%] border border-[#cbced5]"
-              type="email"
-              placeholder="Please enter your Phone or Email"
-              name="email"
-              id="email"
+              type="tel"
+              placeholder="Enter your phone number "
+              name="phoneNumber"
+              id="phoneNumber"
             />
-            <input
-              className="rounded-sm focus:outline-[#2f2ff0] placeholder:text-[#858b9c] px-4 py-3 w-[80%] border border-[#cbced5]"
-              type="password"
-              placeholder="Enter your Password"
-              name="password"
-              id="password"
-            />
-            <div className="mt-[-18px] mr-0 ml-[54%]">Forgot password?</div>
             <div className="flex gap-2 flex-col justify-center w-[80%] items-center ">
               <button
                 type="submit"
@@ -44,7 +39,7 @@ export default function Auth() {
               <div>
                 <p className="text-[#858b9c] font-medium">
                   Don't have an account?
-                  <span className="#2978ff"> Sign up</span>
+                  <span className="text-[#2978ff]"> Sign up</span>
                 </p>
               </div>
             </div>
