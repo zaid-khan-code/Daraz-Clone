@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@layer utilities {
+    .contents {
+        display: contents;
+    }
+}
