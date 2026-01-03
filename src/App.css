@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+*{
+    margin: 0;
+    padding: 0;
+}
 @layer utilities {
     .contents {
         display: contents;
