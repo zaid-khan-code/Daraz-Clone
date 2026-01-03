@@ -1,16 +1,19 @@
-import React from 'react'
-import Helplinks from './navbar/Helplinks';
-import NavContent from './navbar/NavContent';
+import React from "react";
+import Helplinks from "./navbar/Helplinks";
+import NavContent from "./navbar/NavContent";
+import Auth from "./Auth";
+import { PopUpProvider } from "../context/PopUpContext";
 
 const Navbar = () => {
   return (
-    <>
+    <PopUpProvider>
       <header className="bg-[#f9551f] h-29.5 w-full flex flex-col justify-center items-center ">
         <Helplinks />
         <NavContent />
       </header>
-    </>
+        <Auth />
+    </PopUpProvider>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

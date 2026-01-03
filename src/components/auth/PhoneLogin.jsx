@@ -4,14 +4,6 @@ import FacebookIcon from "/facebook-icon.svg?url";
 const PhoneLogin = () => {
   return (
     <>
-      <div className="w-[90%] h-max flex justify-end mt-[11px] mr-0 mb-[-45px] ml-0">
-        <FaTimes className=" text-2xl" />
-      </div>
-      <div className="text-[17px] flex justify-center font-medium items-center h-max gap-10 w-full mt-4 mb-9">
-        <button className="text-[#858b9c] cursor-pointer px-3">Password</button>
-        <span className="text-[#6867679f] cursor-default"> | </span>
-        <button className="cursor-pointer px-3 ">Phone Number</button>
-      </div>
       <form className="w-full flex flex-col gap-10 font-semibold text-sm justify-center items-center">
         <div className="flex w-full justify-center items-center gap-[10px] mt-10">
           <div className="rounded-sm text-[#4b4f5fd9] px-4 py-3 w-[20%] font-medium max-w-max border border-[#cbced5]">

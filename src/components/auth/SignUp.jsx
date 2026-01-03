@@ -1,13 +1,23 @@
-import { FaTimes } from "react-icons/fa";
+import CloseIcon from "@mui/icons-material/Close";
+import { useContext } from "react";
 import GoogleIcon from "/google-icon.svg?url";
 import FacebookIcon from "/facebook-icon.svg?url";
+import { PopUpContext } from "../../context/PopUpContext";
+
 const SignUp = () => {
+  const { setPopUp } = useContext(PopUpContext);
+
   return (
     <>
       <div className="w-[90%] h-max flex justify-end mt-[11px] mr-0 mb-[-45px] ml-0">
-        <FaTimes className=" text-2xl" />
+        <CloseIcon
+          fontSize="medium"
+
+          className="cursor-pointer hover:text-gray-600 transition"
+          onClick={() => setPopUp(false)}
+        />
       </div>
-      <div className="text-[17px] flex justify-center font-medium items-center h-max gap-10 w-full mt-4">
+      <div className="text-[17px] flex justify-center font-medium items-center h-max gap-10 w-max mt-4">
         <button className="text-[#858b9c] cursor-default px-3">Sign up</button>
       </div>
       <form className="w-full flex flex-col gap-10 font-semibold text-sm justify-center items-center">
@@ -85,6 +95,6 @@ const SignUp = () => {
       </div>
     </>
   );
-}
+};
 
-export default SignUp
+export default SignUp;
