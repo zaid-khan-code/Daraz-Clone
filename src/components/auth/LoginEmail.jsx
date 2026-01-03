@@ -1,8 +1,10 @@
-import { FaTimes } from "react-icons/fa";
-import GoogleIcon from "/google-icon.svg?url";
-import FacebookIcon from "/facebook-icon.svg?url";
+
+import { PopUpContext } from "../../context/PopUpContext";
+import { useContext } from "react";
+
 
 const LoginEmail = () => {
+  const { setPopUp } = useContext(PopUpContext);  
   return (
     <>
       <form className="w-full flex flex-col gap-5 font-semibold text-sm justify-center items-center">
@@ -31,12 +33,18 @@ const LoginEmail = () => {
           <div>
             <p className="text-[#858b9c] font-medium">
               Don't have an account?
-              <span className="#2978ff"> Sign up</span>
+              <span
+                className="text-[#2978ff] cursor-pointer "
+                onClick={() => setPopUp("sign")}
+              >
+                {" "}
+                Sign up
+              </span>
             </p>
           </div>
         </div>
       </form>
-      <div className="flex flex-col gap-3 mt-11">
+      {/* <div className="flex flex-col gap-3 mt-11">
         <div className="flex justify-center items-center gap-[10px]">
           Or, login with
         </div>
@@ -50,7 +58,7 @@ const LoginEmail = () => {
             <p>Facebook</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

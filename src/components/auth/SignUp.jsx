@@ -12,9 +12,8 @@ const SignUp = () => {
       <div className="w-[90%] h-max flex justify-end mt-[11px] mr-0 mb-[-45px] ml-0">
         <CloseIcon
           fontSize="medium"
-
           className="cursor-pointer hover:text-gray-600 transition"
-          onClick={() => setPopUp(false)}
+          onClick={() => setPopUp("")}
         />
       </div>
       <div className="text-[17px] flex justify-center font-medium items-center h-max gap-10 w-max mt-4">
@@ -73,7 +72,13 @@ const SignUp = () => {
           <div>
             <p className="text-[#858b9c] font-medium">
               Already have an account?
-              <span className="text-[#2978ff] cursor-pointer"> Log in now</span>
+              <span
+                className="text-[#2978ff] cursor-pointer"
+                onClick={() => setPopUp("log")}
+              >
+                {" "}
+                Log in now
+              </span>
             </p>
           </div>
         </div>

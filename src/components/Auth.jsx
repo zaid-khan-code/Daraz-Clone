@@ -1,6 +1,8 @@
 import { createPortal } from "react-dom";
 import { useContext, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import GoogleIcon from "/google-icon.svg?url";
+import FacebookIcon from "/facebook-icon.svg?url";
 import SignUp from "./auth/SignUp";
 import LoginEmail from "./auth/LoginEmail";
 import PhoneLogin from "./auth/PhoneLogin";
@@ -15,7 +17,7 @@ function LoginThings() {
         <CloseIcon
           fontSize="medium"
           className="cursor-pointer hover:text-gray-600 transition"
-          onClick={() => setPopUp(false)}
+          onClick={() => setPopUp("")}
         />
       </div>
       <div className="text-[17px] flex justify-center font-medium items-center h-max gap-10 w-max mt-4 mb-9">
@@ -38,6 +40,21 @@ function LoginThings() {
         </button>
       </div>
       {activeTab == "login" ? <LoginEmail /> : <PhoneLogin />}
+      <div className="flex flex-col gap-3 mt-11">
+        <div className="flex justify-center items-center gap-[10px] text-[#8f95a4] text-sm font-medium">
+          Or, login with
+        </div>
+        <div className="flex justify-center items-center gap-[10px]">
+          <div className="cursor-pointer flex justify-center items-center gap-[10px]">
+            <img src={GoogleIcon} alt="Google" className="h-5 w-5" />
+            <p className="  text-[#8f95a4] text-sm font-medium">Google</p>
+          </div>
+          <div className="cursor-pointer flex justify-center items-center gap-[10px]">
+            <img src={FacebookIcon} alt="Facebook" className="h-5 w-5" />
+            <p className="  text-[#8f95a4] text-sm font-medium">Facebook</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
@@ -45,14 +62,15 @@ function LoginThings() {
 export default function Auth() {
   const { popUp } = useContext(PopUpContext);
 
-  if (!popUp) return null;
+if (popUp !== "log" && popUp !== "sign") return null;
 
   return createPortal(
     <>
       <div className="h-[100vh] w-full bg-[#0000007a] fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center">
         <div className="bg-white h-[445px] w-[445px] rounded-sm flex flex-col items-center gap-3">
-          <LoginThings />
-          {/* <SignUp /> */}
+          {popUp == "log" ? <LoginThings /> : <SignUp />}
+          {/*  */}
+          {/*  */}
         </div>
       </div>
     </>,

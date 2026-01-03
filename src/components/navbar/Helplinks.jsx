@@ -11,13 +11,13 @@ const Helplinks = (props) => {
         <li className="text-[14px] cursor-pointer">Help & Support</li>
         <li
           className="text-[14px] cursor-pointer"
-          onClick={() => setPopUp(true)}
+          onClick={() => setPopUp("log")}
         >
           Login
         </li>
         <li
           className="text-[14px] cursor-pointer"
-          onClick={() => setPopUp(true)}
+          onClick={() => setPopUp("sign")}
         >
           Sign Up
         </li>

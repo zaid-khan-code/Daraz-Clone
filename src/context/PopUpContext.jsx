@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const PopUpContext = createContext();
 
 export const PopUpProvider = ({ children }) => {
-  const [popUp, setPopUp] = useState(false);
+  const [popUp, setPopUp] = useState("");
 
   return (
     <PopUpContext.Provider value={{ popUp, setPopUp }}>
@@ -11,3 +11,4 @@ export const PopUpProvider = ({ children }) => {
     </PopUpContext.Provider>
   );
 };
+  

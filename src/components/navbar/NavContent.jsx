@@ -1,5 +1,4 @@
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
-import { FiShoppingCart } from "react-icons/fi";
 
 const NavContent = () => {
   return (
@@ -16,7 +15,7 @@ const NavContent = () => {
               name="search"
               id="search"
               placeholder="Search in Daraz"
-              className="bg-transparent h-[45px] w-[600px] focus:outline-none text-[#f9551f]"
+              className="bg-transparent h-[45px] w-[600px] focus:outline-none"
             />
           </div>
           <div className="bg-[#ffe1d3] flex justify-center items-center px-3">
