@@ -1,24 +1,18 @@
 import { createPortal } from "react-dom";
 import { useContext, useState } from "react";
-import CloseIcon from "@mui/icons-material/Close";
 import SignUp from "./auth/SignUp";
 import LoginEmail from "./auth/LoginEmail";
 import PhoneLogin from "./auth/PhoneLogin";
 import Options from "./auth/Options"
 import { PopUpContext } from "../context/PopUpContext";
+import Close from "./UI/Close";
 
 function LoginThings() {
   const [activeTab, setActiveTab] = useState("login");
   const { setPopUp } = useContext(PopUpContext);
   return (
     <>
-      <div className="w-[90%] h-max flex justify-end mt-[11px] mr-0 mb-[-45px] ml-0">
-        <CloseIcon
-          fontSize="medium"
-          className="cursor-pointer hover:text-gray-600 transition"
-          onClick={() => setPopUp("")}
-        />
-      </div>
+      <Close />
       <div className="text-[17px] flex justify-center font-medium items-center h-max gap-10 w-max mt-4 mb-9">
         <button
           className={` cursor-pointer px-3 ${

@@ -1,4 +1,3 @@
-import CloseIcon from "@mui/icons-material/Close";
 import { useContext } from "react";
 import { PopUpContext } from "../../context/PopUpContext";
 import Options from "./Options";

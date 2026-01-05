@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { PopUpContext } from "../context/PopUpContext";
+import CloseIcon from "@mui/icons-material/Close";
+import { PopUpContext } from "../../context/PopUpContext";
 const Close = () => {
   const { setPopUp } = useContext(PopUpContext);
   return (
