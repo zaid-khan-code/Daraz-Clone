@@ -1,6 +1,27 @@
+
+import Carousel from "./UI/Carousel";
+
 const Main = () => {
+  const bannerImages = [
+    "https://placehold.co/800x300/ff6b00/white?text=Daraz+Mall",
+    "https://placehold.co/800x300/8e44ad/white?text=Flash+Sale",
+    "https://placehold.co/800x300/2980b9/white?text=Electronics",
+  ];
+
   return (
-    <>
+    <div className="container mx-auto px-4 flex gap-4 mt-4">
+      {/* Main Carousel Section */}
+      <div className="flex-1">
+        <Carousel 
+          images={bannerImages} 
+          height="h-80" 
+          width="w-full" 
+          autoSlide={true}
+          slideInterval={4000}
+        />
+      </div>
+
+      {/* Right Sidebar (App Promo) */}
       <div
         className="w-48 p-1 h-86 flex flex-col gap-1"
         style={{
@@ -145,7 +166,7 @@ const Main = () => {
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { PopUpContext } from "../../context/PopUpContext";
 import Options from "./Options";
+import Close from "../UI/Close";
 const SignUp = () => {
   const { setPopUp } = useContext(PopUpContext);
 
   return (
     <>
-      
+      <Close />
       <div className="text-[17px] flex justify-center font-medium items-center h-max gap-10 w-max mt-4">
         <button className="text-[#858b9c] cursor-default px-3">Sign up</button>
       </div>
