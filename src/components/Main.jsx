@@ -66,8 +66,8 @@ const Main = () => {
             </span>
           </div>
 
-          <div className="free-voucher mt-[6px] pl-[-33px]">
-            <div className="icon-item flex flex-row items-center">
+          <div className="free-voucher mt-[6px] pl-[33px]">
+            <div className="icon-item flex flex-row items-center mt-2">
               <div className="common-img badge inline-flex h-[36px] w-[36px]">
                 <picture className="inline-flex h-full max-h-full max-w-full w-full">
                   <source
@@ -88,7 +88,7 @@ const Main = () => {
                 Free Shipping
               </span>
             </div>
-            <div className="icon-item flex flex-row items-center">
+            <div className="icon-item flex flex-row items-center mt-2">
               <div className="common-img badge inline-flex h-[36px] w-[36px]">
                 <picture className="inline-flex h-full max-h-full max-w-full w-full">
                   <source
