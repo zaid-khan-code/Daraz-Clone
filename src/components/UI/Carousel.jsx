@@ -30,6 +30,36 @@ const Carousel = ({
     setCurrentIndex(slideIndex);
   };
 
+  const [isDragging, setIsDragging] = useState(false);
+  const [startPos, setStartPos] = useState(0);
+  const [currentTranslate, setCurrentTranslate] = useState(0);
+
+  const getPositionX = (event) => {
+    return event.type.includes("mouse")
+      ? event.clientX
+      : event.touches[0].clientX;
+  };
+
+  const handleDragStart = (e) => {
+    setIsDragging(true);
+    setStartPos(getPositionX(e));
+  };
+
+  const handleDragMove = (e) => {
+    if (!isDragging) return;
+    const currentPosition = getPositionX(e);
+    setCurrentTranslate(currentPosition - startPos);
+  };
+
+  const handleDragEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    const movedBy = currentTranslate;
+    if (movedBy < -50) nextSlide();
+    if (movedBy > 50) prevSlide();
+    setCurrentTranslate(0);
+  };
+
   // Handle updates to the images array to prevent out-of-bounds errors
   useEffect(() => {
     if (currentIndex >= images.length) {
@@ -55,17 +85,32 @@ const Carousel = ({
 
   return (
     <div
-      className={`relative group ${width} ${className}`}
+      className={`relative group ${width} ${className} cursor-grab ${
+        isDragging ? "cursor-grabbing" : ""
+      }`}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseLeave={() => {
+        setIsHovered(false);
+        if (isDragging) handleDragEnd();
+      }}
+      onMouseDown={handleDragStart}
+      onMouseMove={handleDragMove}
+      onMouseUp={handleDragEnd}
+      onTouchStart={handleDragStart}
+      onTouchMove={handleDragMove}
+      onTouchEnd={handleDragEnd}
     >
       <div className={`relative overflow-hidden rounded-lg ${height}`}>
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute w-full h-full transition-transform duration-500 ease-in-out`}
+            className={`absolute w-full h-full transition-transform ease-in-out ${
+              isDragging ? "duration-0" : "duration-500"
+            }`}
             style={{
-              transform: `translateX(${100 * (index - currentIndex)}%)`,
+              transform: `translateX(calc(${
+                100 * (index - currentIndex)
+              }% + ${currentTranslate}px))`,
             }}
           >
             <img
@@ -75,7 +120,8 @@ const Carousel = ({
                   ? `Slide ${index + 1}`
                   : image.alt || `Slide ${index + 1}`
               }
-              className="absolute block w-full h-full object-cover"
+              className="absolute block w-full h-full object-cover select-none"
+              onDragStart={(e) => e.preventDefault()}
             />
           </div>
         ))}
