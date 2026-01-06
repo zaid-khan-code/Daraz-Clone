@@ -45,7 +45,7 @@ if (popUp !== "log" && popUp !== "sign") return null;
 
   return createPortal(
     <>
-      <div className="h-[100vh] w-full bg-[#0000007a] fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center">
+      <div className="h-[100vh] w-full bg-[#0000007a] fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center z-[1000]">
         <div className="bg-white h-[445px] w-[445px] rounded-sm flex flex-col items-center gap-3">
           {popUp == "log" ? <LoginThings /> : <SignUp />}
           {/*  */}

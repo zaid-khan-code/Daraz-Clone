@@ -85,7 +85,7 @@ const Carousel = ({
 
   return (
     <div
-      className={`relative group ${width} ${className} cursor-grab ${
+      className={`relative group ${width} ${className} cursor-default ${
         isDragging ? "cursor-grabbing" : ""
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -128,12 +128,12 @@ const Carousel = ({
       </div>
 
       {/* Indicators */}
-      <div className="absolute flex gap-1 z-30 -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      <div className="absolute   flex gap-1 z-30 -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
         {images.map((_, index) => (
           <button
             key={index}
             type="button"
-            className={`w-3 h-3 rounded-full ${
+            className={`w-3 h-3 cursor-pointer rounded-full ${
               currentIndex === index
                 ? indicatorActiveColor
                 : indicatorInactiveColor
