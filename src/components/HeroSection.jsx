@@ -15,33 +15,19 @@ const HeroSection = () => {
     "https://img.lazcdn.com/us/domino/3fd34cb2-1ddb-4ac4-ad54-1047a5714f75_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
     "https://img.lazcdn.com/us/domino/6cd12443-88f0-437e-aeab-771aba83bdb1_PK-1976-688.jpg_2200x2200q80.jpg_.avif",
   ];
-  const [scrolled, setScrolled] = useState(true);
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= 1) {
-      setScrolled(false);
-    } else {
-      setScrolled(true);
-    }
-  });
 
   return (
     <>
-      <div className="mt-[118px]">
-        <div
-          className={`h-3 w-full ${scrolled ? "bg-[#f9551f]" : "bg-[#ffffff]"}`}
-        ></div>
-        <div className="container mx-auto px-4 flex gap-4  bg-[#f5f5f5] w-max ">
-          <Carousel
-            images={bannerImages}
-            height="h-[345px]"
-            width="w-[990px]"
-            autoSlide={true}
-            slideInterval={4000}
-          />
+      <div className="flex gap-4 ">
+        <Carousel
+          images={bannerImages}
+          height="h-[345px]"
+          width="w-[990px]"
+          autoSlide={true}
+          slideInterval={4000}
+        />
 
-          <AppReminder />
-        </div>
+        <AppReminder />
       </div>
     </>
   );

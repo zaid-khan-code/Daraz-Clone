@@ -15,15 +15,7 @@ const AppReminder = () => {
             <picture
               className="inline-flex h-full max-h-full max-w-full w-full
 "
-            >
-              <source
-                srcSet="https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg_.avif"
-                type="image/avif"
-              />
-              <source
-                srcSet="https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg_.webp"
-                type="image/webp"
-              />
+            > 
               <img
                 src="https://img.lazcdn.com/us/domino/1ee015d6a5c62fd0339c88c657c1c183.jpg_120x120q80.jpg"
                 alt="Daraz App"
@@ -44,14 +36,7 @@ const AppReminder = () => {
           <div className="score text-white ml-[8px] mt-[8px] flex flex-row flex-items-center">
             <div className="common-img star h-[11px] w-[10px] inline-flex">
               <picture className="inline-flex h-full max-h-full max-w-full w-full">
-                <source
-                  srcset="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x80q80.png_.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x80q80.png_.webp"
-                  type="image/webp"
-                />
+                
                 <img
                   className="inline-block h-auto max-h-full max-w-full w-auto object-cover"
                   src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01cAMOjU1zqQJZU8EbT_!!6000000006765-2-tps-19-18.png_80x80q80.png"
@@ -72,14 +57,7 @@ const AppReminder = () => {
             <div className="icon-item flex flex-row items-center mt-2">
               <div className="common-img badge inline-flex h-[36px] w-[36px]">
                 <picture className="inline-flex h-full max-h-full max-w-full w-full">
-                  <source
-                    srcset="https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150x150q80.png_.avif"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150x150q80.png_.webp"
-                    type="image/webp"
-                  />
+                   
                   <img
                     className="inline-block h-auto max-h-full max-w-full w-auto object-cover"
                     src="https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01n3PMa828kJZVuCbPp_!!6000000007970-2-tps-72-72.png_150x150q80.png"
@@ -93,14 +71,7 @@ const AppReminder = () => {
             <div className="icon-item flex flex-row items-center mt-2">
               <div className="common-img badge inline-flex h-[36px] w-[36px]">
                 <picture className="inline-flex h-full max-h-full max-w-full w-full">
-                  <source
-                    srcset="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150x150q80.png_.avif"
-                    type="image/avif"
-                  />
-                  <source
-                    srcset="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150x150q80.png_.webp"
-                    type="image/webp"
-                  />
+                  
                   <img
                     className="inline-block h-auto max-h-full max-w-full w-auto object-cover"
                     src="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01J03SMW1lebTE7xkaN_!!6000000004844-2-tps-72-72.png_150x150q80.png"
@@ -117,14 +88,7 @@ const AppReminder = () => {
           <div className="content flex flex-row items-center">
             <div className="common-img qr-code-image inline-flex bg-white h-[90px] w-[90px] mr-[6px] overflow-hidden">
               <picture className="inline-flex h-full max-h-full max-w-full w-full">
-                <source
-                  srcset="https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg_360x360q80.jpg_.avif"
-                  type="image/avif"
-                />
-                <source
-                  srcset="https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg_360x360q80.jpg_.webp"
-                  type="image/webp"
-                />
+                
                 <img
                   className="inline-block h-auto max-h-full max-w-full w-auto object-cover border-0"
                   src="https://img.drz.lazcdn.com/g/tps/imgextra/i2/O1CN01jHjmpl1pxcRVgFrYS_!!6000000005427-0-tps-150-150.jpg_360x360q80.jpg"
