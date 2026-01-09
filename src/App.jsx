@@ -1,13 +1,20 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import Main from "./components/Main";
-import Navbar from "./components/Navbar";
+import { ProductProvider } from "./context/ProductContext";
+import Detail from "./pages/Detail";
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <Navbar />
-      <Main />
-      <Footer />
+      <BrowserRouter>
+        <ProductProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/detail" element={<Detail />} />
+          </Routes>
+        </ProductProvider>
+      </BrowserRouter>
     </>
   );
 }

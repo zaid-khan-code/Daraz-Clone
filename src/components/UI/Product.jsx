@@ -1,7 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
+import { ProductContext } from "../../context/ProductContext";
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
+  const { productC, setProductC } = useContext(ProductContext);
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
+  function goToProduct(e) {
+    let currentItration = e.currentTarget.dataset.id;
+    setProductC(products[currentItration]);
+    console.log(products[currentItration]);
+    
+    navigate("/detail");
+  }
 
   useEffect(() => {
     async function fetching() {
@@ -21,8 +32,9 @@ const Product = () => {
       {products.map((product) => (
         <a
           key={product.id}
+          data-id={product.id-1}
           id={product.category}
-          href="#"
+          onClick={(e)=>{goToProduct(e)}}
           className="pc-custom-link h-max card-fs-content-body-unit hp-mod-card-hover relative w-40 h-64 md:w-52 md:h-80 lg:w-56 lg:h-96 text-black block no-underline bg-transparent hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out"
         >
           {/* Product Image */}
@@ -31,7 +43,7 @@ const Product = () => {
               <img
                 src={product.image}
                 alt={product.description}
-                className="inline-block h-full w-full object-cover"
+                className="inline-block h-full w-full object-contain"
               />
             </picture>
           </div>
@@ -52,7 +64,7 @@ const Product = () => {
                 {(
                   product.price * 283 -
                   (product.price * 283 * 10) / 100
-                ).toFixed(2)}
+                ).toFixed(0)}
               </span>
             </div>
 

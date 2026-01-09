@@ -1,21 +1,10 @@
 import React from "react";
-import {
-  FaStar,
-  FaShareAlt,
-  FaHeart,
-  FaMinus,
-  FaPlus,
-  FaCheck,
-} from "react-icons/fa";
-import {
-  IoIosArrowBack,
-  IoIosArrowForward,
-  IoMdArrowDropdown,
-} from "react-icons/io";
+import { FaStar, FaShareAlt, FaHeart, FaMinus, FaPlus } from "react-icons/fa";
+import { IoMdArrowDropdown } from "react-icons/io";
 
-const Details = () => {
+const Details = ({title,descprtion,img,rating,}) => {
   return (
-    <div className="bg-[#eff0f5] w-full min-h-screen pt-4 pb-10">
+    <div className="bg-[#eff0f5] w-full pt-4 pb-10 mt-30 h-max">
       <div className="max-w-[1200px] w-full mx-auto bg-white p-4 rounded-sm shadow-sm opacity-100 transition-opacity duration-300">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-8">
           {/* --- Left Column: Gallery --- */}
@@ -25,7 +14,7 @@ const Details = () => {
               <img
                 src="https://img.drz.lazcdn.com/collect/sg/p/0c704ec6ef02059b1f2d1f73e05104d4.jpg_200x200q80.jpg_.avif"
                 alt="Product Main"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
@@ -83,6 +72,15 @@ const Details = () => {
             <div className="pt-4 pb-2">
               <div className="text-[#f85606] text-[30px] leading-8 font-normal">
                 Rs. 498
+              </div>
+              <div className="fs-card-origin-price flex flex-row leading-3">
+                <div className="fs-origin-price flex flex-row text-gray-400 line-through">
+                  <span className="currency text-xs md:text-sm">Rs.</span>
+                  <span className="price text-xs md:text-sm ml-1">2827.17</span>
+                </div>
+                <span className="itemDiscount text-gray-900 text-xs md:text-sm ml-1">
+                  -10%
+                </span>
               </div>
             </div>
 
