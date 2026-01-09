@@ -13,7 +13,7 @@ const ProductSection = () => {
         </div>
 
         {/* Content Container */}
-        <div className="cardFsContent bg-white h-96">
+        <div className="cardFsContent bg-white h-max">
           {/* Header Section */}
           <div className="card-fs-content-header flex flex-justify-between flex items-center justify-between bg-white border-b border-gray-300 h-15 mb-2.5 overflow-hidden">
             <div className="flex flex-items-center flex items-center">
