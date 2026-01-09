@@ -3,111 +3,125 @@ import React from "react";
 const FooterContent2 = () => {
   return (
     <>
-      <div className="footer-second bg-white py-5 pb-6">
-        <div className="lzd-footer-inner mx-auto overflow-hidden w-[1188px]">
-          <div className="lzd-footer-width-32 float-left overflow-hidden w-[32%]">
-            <h3 className="lzd-footer-h3 text-[#183544] text-base font-normal leading-[2.2em] mb-[15px]">
-              Payment Methods
+      <div className="footer-fourth bg-white text-[#606060] py-10">
+        <div className="lzd-footer-inner mx-auto overflow-hidden w-full md:px-4 lg:px-6 xl:px-0 xl:w-[1188px] 2xl:w-[1320px]">
+          <div className="lzd-footer-width-50 float-left overflow-hidden w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+            <h3 className="lzd-footer-title text-[#2a2a2a] text-base font-light leading-5 my-[5px] mr-2.5">
+              Daraz International
             </h3>
-            <div className="payment-card-list payment-card-list-daraz mr-5">
-              <span className="lzd-icon-payment lzd-icon-payment-daraz inline-block m-0 mr-[25px] mb-[10px]">
+            <div className="lzd-footer-venture-list flex">
+              <a className="lzd-footer-country country-pk lzd-footer-country-with-text text-[#888] no-underline items-center flex h-auto w-auto">
                 <img
                   loading="lazy"
-                  src="https://img.lazcdn.com/us/domino/ee9913f8-8258-4382-b97e-e2047ce93012_PK-139-84.png"
-                  alt="cod"
-                  style={{ height: "28px", width: "100%" }}
+                  className="lzd-footer-country-image h-[34px] w-[34px]"
+                  src="https://img.lazcdn.com/us/domino/1fe7d756-2469-4d8e-82b2-d5eb7cbad875_PK-84-84.png"
+                  alt="pk"
                 />
-              </span>
 
-              <span className="lzd-icon-payment lzd-icon-payment-daraz inline-block m-0 mr-[25px] mb-[10px]">
-                <img
-                  loading="lazy"
-                  src="https://img.lazcdn.com/us/domino/78355368-8518-4b88-9f8e-e5751ee0863a_PK-140-84.png"
-                  alt="visa"
-                  style={{ height: "28px", width: "100%" }}
-                />
-              </span>
+                <span className="lzd-footer-country-text text-sm ml-[7px] mr-[15px]">
+                  Pakistan
+                </span>
+              </a>
 
-              <span className="lzd-icon-payment lzd-icon-payment-daraz inline-block m-0 mr-[25px] mb-[10px]">
+              <a className="lzd-footer-country country-bd lzd-footer-country-with-text text-[#888] no-underline items-center flex h-auto w-auto">
                 <img
                   loading="lazy"
-                  src="https://img.lazcdn.com/us/domino/5ba8a652-1445-45cb-a2a5-ed6043004243_PK-63-48.png"
-                  alt="ms"
-                  style={{ height: "28px", width: "100%" }}
+                  className="lzd-footer-country-image h-[34px] w-[34px]"
+                  src="https://img.lazcdn.com/us/domino/05a4ef2c-095c-407d-9295-aa45b5412de0_PK-84-84.png"
+                  alt="bd"
                 />
-              </span>
 
-              <span className="lzd-icon-payment lzd-icon-payment-daraz inline-block m-0 mr-[25px] mb-[10px]">
-                <img
-                  loading="lazy"
-                  src="https://img.lazcdn.com/us/domino/dd8e0447-8052-44f3-8ab2-b24c56a2491f_PK-139-84.png"
-                  alt="easy-pay"
-                  style={{ height: "28px", width: "100%" }}
-                />
-              </span>
+                <span className="lzd-footer-country-text text-sm ml-[7px] mr-[15px]">
+                  Bangladesh
+                </span>
+              </a>
 
-              <span className="lzd-icon-payment lzd-icon-payment-daraz inline-block m-0 mr-[25px] mb-[10px]">
+              <a className="lzd-footer-country country-lk lzd-footer-country-with-text text-[#888] no-underline items-center flex h-auto w-auto">
                 <img
                   loading="lazy"
-                  src="https://img.lazcdn.com/us/domino/e5c3cd93-b796-410f-9bfd-fbfdaa055149_PK-144-84.png"
-                  alt="daraz-wallet"
-                  style={{ height: "28px", width: "100%" }}
+                  className="lzd-footer-country-image h-[34px] w-[34px]"
+                  src="https://img.lazcdn.com/us/domino/5536488d-c32a-44eb-8307-ed6651d907da_PK-84-84.png"
+                  alt="lk"
                 />
-              </span>
 
-              <span className="lzd-icon-payment lzd-icon-payment-daraz inline-block m-0 mr-[25px] mb-[10px]">
-                <img
-                  loading="lazy"
-                  src="https://img.lazcdn.com/us/domino/56915ba8-b2c0-4caf-b3a1-7e0f3d2d45cf_PK-139-84.png"
-                  alt="jazz-cash"
-                  style={{ height: "28px", width: "100%" }}
-                />
-              </span>
+                <span className="lzd-footer-country-text text-sm ml-[7px] mr-[15px]">
+                  Sri Lanka
+                </span>
+              </a>
 
-              <span className="lzd-icon-payment lzd-icon-payment-daraz inline-block m-0 mr-[25px] mb-[10px]">
+              <a className="lzd-footer-country country-mm lzd-footer-country-with-text text-[#888] no-underline items-center flex h-auto w-auto">
                 <img
                   loading="lazy"
-                  src="https://img.lazcdn.com/us/domino/75489476-3c86-44ed-bf81-8b0579d56e1c_PK-139-84.png"
-                  alt="union-pay-mm"
-                  style={{ height: "28px", width: "100%" }}
+                  className="lzd-footer-country-image h-[34px] w-[34px]"
+                  src="https://img.lazcdn.com/us/domino/8896f696-b36f-4cb1-8576-2e86eed05046_PK-84-84.png"
+                  alt="mm"
                 />
-              </span>
 
-              <span className="lzd-icon-payment lzd-icon-payment-daraz inline-block m-0 mr-[25px] mb-[10px]">
-                <img
-                  loading="lazy"
-                  src="https://img.lazcdn.com/us/domino/6668ff96-bf9a-40bd-8ce4-f7f7c0bee385_PK-144-84.png"
-                  alt="hbl"
-                  style={{ height: "28px", width: "100%" }}
-                />
-              </span>
+                <span className="lzd-footer-country-text text-sm ml-[7px] mr-[15px]">
+                  Myanmar
+                </span>
+              </a>
 
-              <span className="lzd-icon-payment lzd-icon-payment-daraz inline-block m-0 mr-[25px] mb-[10px]">
+              <a className="lzd-footer-country country-np lzd-footer-country-with-text text-[#888] no-underline items-center flex h-auto w-auto">
                 <img
                   loading="lazy"
-                  src="https://img.lazcdn.com/us/domino/7237a412-04cc-4571-a200-44f6f847a9da_PK-144-84.png"
-                  alt="easy-monthly-installments"
-                  style={{ height: "28px", width: "100%" }}
+                  className="lzd-footer-country-image h-[34px] w-[34px]"
+                  src="https://img.lazcdn.com/us/domino/39f7f111-619f-47cd-993c-a551aaed15fd_PK-86-86.png"
+                  alt="np"
                 />
-              </span>
+
+                <span className="lzd-footer-country-text text-sm ml-[7px] mr-[15px]">
+                  Nepal
+                </span>
+              </a>
+            </div>
+          </div>
+          <div className="lzd-footer-width-25 float-left overflow-hidden w-full md:w-1/4 lg:w-1/4 xl:w-1/4">
+            <h3 className="lzd-footer-title text-[#2a2a2a] text-base font-light leading-5 my-[5px] mr-2.5">
+              Follow Us
+            </h3>
+            <div className="lzd-follow-us-icon-list items-center flex">
+              <a className="lzd-follow-us-icon lzd-follow-us-icon-daraz h-7 w-7 mr-[17px] text-[#888] no-underline flex items-center justify-center">
+                <img
+                  loading="lazy"
+                  className="h-full w-full"
+                  src="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01Wdetn224xMIRNihao_!!6000000007457-2-tps-34-34.png"
+                  alt="facebook"
+                />
+              </a>
+
+              <a className="lzd-follow-us-icon lzd-follow-us-icon-daraz h-7 w-7 mr-[17px] text-[#888] no-underline flex items-center justify-center">
+                <img
+                  loading="lazy"
+                  className="h-full w-full"
+                  src="https://img.lazcdn.com/us/domino/53d2eeea-55ed-4da7-99d6-31f9814b8e3e_PK-75-76.png"
+                  alt="X"
+                />
+              </a>
+
+              <a className="lzd-follow-us-icon lzd-follow-us-icon-daraz h-7 w-7 mr-[17px] text-[#888] no-underline flex items-center justify-center">
+                <img
+                  loading="lazy"
+                  className="h-full w-full"
+                  src="https://img.lazcdn.com/us/domino/f03a43e7-3655-4049-8c12-b1614ac2a2d4_PK-75-76.png"
+                  alt="instagram"
+                />
+              </a>
+
+              <a className="lzd-follow-us-icon lzd-follow-us-icon-daraz h-7 w-7 mr-[17px] text-[#888] no-underline flex items-center justify-center">
+                <img
+                  loading="lazy"
+                  className="h-full w-full"
+                  src="https://img.lazcdn.com/us/domino/6bf9555a-40ae-466d-a756-907f70aa3461_PK-76-76.png"
+                  alt="youtube"
+                />
+              </a>
             </div>
           </div>
 
-          <div className="lzd-footer-width-32 float-left overflow-hidden w-[32%]">
-            <h3 className="lzd-footer-h3 text-[#183544] text-base font-normal leading-[2.2em] mb-[15px]">
-              Verified by
-            </h3>
-            <div className="lzd-footer-verified">
-              <div className="lzd-footer-verified-left">
-                <div className="lzd-footer-verified-item">
-                  <img
-                    loading="lazy"
-                    alt="Daraz"
-                    src="//img.drz.lazcdn.com/g/tps/imgextra/i4/O1CN01ZaMORP1I3qlBom0V2_!!6000000000838-2-tps-73-41.png"
-                  />
-                </div>
-              </div>
-              <div className="lzd-footer-verified-right"></div>
+          <div className="lzd-footer-width-25 float-left overflow-hidden w-full md:w-1/4 lg:w-1/4 xl:w-1/4">
+            <div className="lzd-footer-copyright text-[#606060] float-right text-sm font-extralight leading-[30px]">
+              © Daraz 2026
             </div>
           </div>
         </div>
