@@ -1,5 +1,4 @@
 import React, { useEffect, useState,useContext } from "react";
-import { ProductContext } from "../../context/ProductContext";
 import { Link } from "react-router-dom";
 
 const Product = () => {
@@ -22,7 +21,7 @@ const Product = () => {
       {products.map((product) => (
         <Link
           key={product.id}
-          to={product.id}
+          to={`/product/${product.id}`}
           id={product.category}
           className="pc-custom-link h-max card-fs-content-body-unit hp-mod-card-hover relative w-40 h-64 md:w-52 md:h-80 lg:w-56 lg:h-96 text-black block no-underline bg-transparent hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out"
         >

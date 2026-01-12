@@ -5,12 +5,12 @@ import Details from "../components/Details";
 import { useParams } from "react-router-dom";
  
 const Detail = () => {
-  const cUrl = useParams();
-  const [product , setProducts] = useState([]);
+  const { id } = useParams();
+  const [product , setProducts] = useState(null);
   useEffect(() => {
     async function fetchSpecficProduct() {
       try{
-        let response = await fetch(`https://fakestoreapi.com/products/${cUrl}`)
+        let response = await fetch(`https://fakestoreapi.com/products/${id}`)
         let convertion = await response.json();
         setProducts(convertion)
       }catch(err){
@@ -19,22 +19,23 @@ const Detail = () => {
       }
     }
     fetchSpecficProduct();
-  }, [cUrl]);
-
-    if (!product) return <p>PLease Select a product</p>;
-
+  }, [id]);
+  
+  if (!product) return <p>PLease Select a product</p>;
+ 
   return (
     <>
       <Navbar />
-        <Details
-          title={product.title}
-          id={product.id}
-          descprtion={product.description}
-          img={product.image}
-          rating={product.rating}
-          price={product.price}
-        />
-      
+      <Details
+        title={product.title}
+        id={product.id}
+        descprtion={product.description}
+        img={product.image}
+        rating={product.rating}
+        price={product.price}
+        rate={product?.rating?.rate}
+        count={product?.rating?.count}
+      />
 
       <Footer />
     </>

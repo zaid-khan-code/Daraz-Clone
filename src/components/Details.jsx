@@ -1,8 +1,9 @@
-import React from "react";
+import { Rating } from "@mui/material";
+import React, { useState } from "react";
 import { FaStar, FaShareAlt, FaHeart, FaMinus, FaPlus } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-const Details = ({title,descprtion,img,rating,}) => {
+const Details = ({ title, descprtion, img, rate, count, price }) => {
   return (
     <div className="bg-[#eff0f5] w-full pt-4 pb-10 mt-30 h-max">
       <div className="max-w-[1200px] w-full mx-auto bg-white p-4 rounded-sm shadow-sm opacity-100 transition-opacity duration-300">
@@ -12,7 +13,7 @@ const Details = ({title,descprtion,img,rating,}) => {
             {/* Main Image */}
             <div className="w-full relative mb-4 group cursor-pointer">
               <img
-                src="https://img.drz.lazcdn.com/collect/sg/p/0c704ec6ef02059b1f2d1f73e05104d4.jpg_200x200q80.jpg_.avif"
+                src={img}
                 alt="Product Main"
                 className="w-full h-auto object-contain"
               />
@@ -24,11 +25,10 @@ const Details = ({title,descprtion,img,rating,}) => {
             {/* Title & Description */}
             <div className="flex flex-col gap-1 mb-2">
               <h1 className="text-[20px] md:text-[22px] leading-7 text-[#212121] font-medium break-words">
-                Case for huawei y6p 2020 phone casing
+                {title}
               </h1>
               <p className="text-[14px] md:text-[15px] leading-5 text-[#757575] font-normal break-words">
-                Softcase Silicone shockproof back Cover new design aesthetic
-                Cartoon cat with holder for mirror JTMMZJ01
+                {descprtion}
               </p>
             </div>
 
@@ -37,21 +37,15 @@ const Details = ({title,descprtion,img,rating,}) => {
               <div className="flex items-center gap-2 md:gap-3 flex-wrap">
                 <div className="flex items-center gap-1">
                   <div className="flex text-[#faca51] text-[12px]">
-                    <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStar />
+                    <Rating
+                      name="half-rating-read"
+                      defaultValue={rate}
+                      precision={0.1}
+                      readOnly
+                    />
                   </div>
                   <span className="text-[#1a9cb7] text-[12px] leading-4 cursor-pointer hover:underline border-r border-gray-300 pr-3">
-                    Ratings 14
-                  </span>
-                </div>
-
-                <div className="text-[12px] text-[#9e9e9e]">
-                  <span className="text-[#9e9e9e] mr-1">Brand:</span>
-                  <span className="text-[#1a9cb7] cursor-pointer hover:underline">
-                    No Brand
-                  </span>
-                  <span className="mx-2">|</span>
-                  <span className="text-[#1a9cb7] cursor-pointer hover:underline">
-                    More Mobile Accessories from No Brand
+                    {count}
                   </span>
                 </div>
               </div>
@@ -71,29 +65,22 @@ const Details = ({title,descprtion,img,rating,}) => {
             {/* Price section */}
             <div className="pt-4 pb-2">
               <div className="text-[#f85606] text-[30px] leading-8 font-normal">
-                Rs. 498
+                <span className="currency text-xs md:text-3xl">Rs.</span>
+                <span className="price text-xs md:text-3xl ml-1"> 
+                  {(price * 283 - (price * 283 * 10) / 100).toFixed(0)}
+                </span>
               </div>
               <div className="fs-card-origin-price flex flex-row leading-3">
                 <div className="fs-origin-price flex flex-row text-gray-400 line-through">
                   <span className="currency text-xs md:text-sm">Rs.</span>
-                  <span className="price text-xs md:text-sm ml-1">2827.17</span>
+                  <span className="price text-xs md:text-sm ml-1">
+                    {" "}
+                    {(price * 283).toFixed(2)}
+                  </span>
                 </div>
-                <span className="itemDiscount text-gray-900 text-xs md:text-sm ml-1">
+                <span className="itemDiscount text-[#f00] text-xs md:text-sm ml-1">
                   -10%
                 </span>
-              </div>
-            </div>
-
-            {/* Promotions */}
-            <div className="flex items-start gap-4 md:gap-14 my-4">
-              <span className="text-[#757575] text-[14px] leading-4 pt-1 min-w-[70px]">
-                Promotions
-              </span>
-              <div className="flex items-center">
-                <div className="bg-[#fff5f0] border border-[#f57224] text-[#f57224] px-2 py-0.5 text-[12px] relative cursor-pointer flex items-center gap-1 font-medium">
-                  Min. spend Rs. 1,000
-                  <IoMdArrowDropdown size={16} />
-                </div>
               </div>
             </div>
 
