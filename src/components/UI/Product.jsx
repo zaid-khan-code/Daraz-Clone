@@ -1,24 +1,28 @@
 import React, { useEffect, useState,useContext } from "react";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
+  const [loading,setLoading]=useState(true);
   useEffect(() => {
     async function fetching() {
       try {
         const response = await fetch("https://fakestoreapi.com/products");
         const convert = await response.json();
         setProducts(convert);
+        setLoading(false)
       } catch (err) {
         throw new Error(`Error Code ${err} `);
       }
     }
     fetching();
   }, []);
-
+  console.log(products);
+  
   return (
     <>
-      {products.map((product) => (
+    {loading ?<Loader /> : products.map((product) => (
         <Link
           key={product.id}
           to={`/product/${product.id}`}

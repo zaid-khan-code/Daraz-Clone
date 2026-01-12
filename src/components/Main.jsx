@@ -1,17 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeroSection from "./HeroSection";
 import ProductSection from "./ProductSection";
 
 const Main = () => {
   const [scrolled, setScrolled] = useState(true);
+ useEffect(() => {
+   const handleScroll = () => {
+     if (window.scrollY >= 1) {
+       setScrolled(false);
+     } else {
+       setScrolled(true);
+     }
+   };
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= 1) {
-      setScrolled(false);
-    } else {
-      setScrolled(true);
-    }
-  });
+   window.addEventListener("scroll", handleScroll);
+
+   return () => {
+     window.removeEventListener("scroll", handleScroll);
+   };
+ }, []);
+
   return (
     <>
       <div className="bg-[#f5f5f5]">

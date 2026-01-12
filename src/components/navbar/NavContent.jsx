@@ -5,7 +5,7 @@ const NavContent = () => {
     <>
       <div className="flex gap-2 md:gap-6 lg:gap-10 justify-center items-center w-full px-4 md:px-8 xl:px-0 max-w-[1200px] mx-auto">
         <div className="shrink-0">
-          <img src="./logo.png" alt="Daraz logo" className="h-8 md:h-10" />
+          <img src="/logo.png" alt="Daraz logo" className="h-8 md:h-10" />
         </div>
 
         <div className=" bg-white  rounded-sm flex flex-1 max-w-[600px] items-center">
