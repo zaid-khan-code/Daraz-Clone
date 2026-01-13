@@ -145,3 +145,4 @@ const Details = ({ title, descprtion, img, rate, count, price }) => {
 };
 
 export default Details;
+

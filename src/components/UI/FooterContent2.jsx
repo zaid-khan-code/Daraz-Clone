@@ -131,3 +131,4 @@ const FooterContent2 = () => {
 };
 
 export default FooterContent2;
+

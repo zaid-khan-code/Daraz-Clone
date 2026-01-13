@@ -11,4 +11,5 @@ export const PopUpProvider = ({ children }) => {
     </PopUpContext.Provider>
   );
 };
+
   
