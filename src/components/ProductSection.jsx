@@ -2,7 +2,7 @@ import React from "react";
 import Product from "./UI/Product";
 import { Link } from "react-router-dom";
 
-const ProductSection = ({ showbtn ,showProduct}) => {
+const ProductSection = ({ showbtn}) => {
   return (
     <>
       <div className="pc-custom-link hp-mod-card flash-sale-comp-container mx-auto w-full max-w-7xl pt-6 text-black no-underline block">
@@ -24,19 +24,23 @@ const ProductSection = ({ showbtn ,showProduct}) => {
                 </div>
               </div>
             </div>
-            {showbtn ? 
-            <Link
-            to="/products"
-              className="pc-custom-link shopMoreBtn text text-center border border-orange-500 bg-transparent text-orange-500 rounded text-sm font-medium h-9 leading-9 mr-3 mt-3 px-2.5 block no-underline"
-            >
-              <span className="text-sm text-orange-500">SHOP ALL PRODUCTS</span>
-            </Link>
-          :""}
+            {showbtn ? (
+              <Link
+                to="/products"
+                className="pc-custom-link shopMoreBtn text text-center border border-orange-500 bg-transparent text-orange-500 rounded text-sm font-medium h-9 leading-9 mr-3 mt-3 px-2.5 block no-underline"
+              >
+                <span className="text-sm text-orange-500">
+                  SHOP ALL PRODUCTS
+                </span>
+              </Link>
+            ) : (
+              ""
+            )}
           </div>
 
           {/* Products Grid */}
           <div className="flex flex-wrap gap-3">
-            <Product />
+            <Product  />
           </div>
         </div>
       </div>

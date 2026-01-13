@@ -31,7 +31,7 @@ const Main = () => {
           ></div>
           <div className="container mx-auto px-4 flex flex-col gap-3  bg-[#f5f5f5] w-max ">
             <HeroSection />
-            <ProductSection />
+            <ProductSection showbtn={true}  />
           </div>
         </div>
       </div>
