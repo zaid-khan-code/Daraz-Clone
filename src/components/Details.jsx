@@ -2,9 +2,22 @@ import { Rating } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { FaShareAlt, FaHeart, FaMinus, FaPlus } from "react-icons/fa";
 import Loader from "./UI/Loader";
+import { useLocation } from "react-router-dom";
 
 const Details = ({ title, descprtion, img, rate, count, price }) => {
   const [loading, setLoading] = useState(false);
+  const location = useLocation();
+  const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  const addToCart = () => {
+    let already = cartItems.some(
+      (item) => item === `https://fakestoreapi.com${location.pathname}`
+    );
+    if (!already) {
+      cartItems.push(`https://fakestoreapi.com${location.pathname}`);
+    }
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+  };
 
   return (
     <>
@@ -114,10 +127,10 @@ const Details = ({ title, descprtion, img, rate, count, price }) => {
 
                   {/* Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 mt-4">
-                    <button className="flex-1 sm:max-w-[240px] h-[48px] bg-[#2abbe8] hover:bg-[#26abd4] text-white text-[16px] font-medium rounded-sm shadow-sm transition-colors uppercase">
-                      Buy Now
-                    </button>
-                    <button className="flex-1 sm:max-w-[240px] h-[48px] bg-[#f57224] hover:bg-[#d96520] text-white text-[16px] font-medium rounded-sm shadow-sm transition-colors uppercase">
+                    <button
+                      className="flex-1 sm:max-w-[240px] h-[48px] bg-[#f57224] hover:bg-[#d96520] text-white text-[16px] font-medium rounded-sm shadow-sm transition-colors uppercase"
+                      onClick={addToCart}
+                    >
                       Add to Cart
                     </button>
                   </div>

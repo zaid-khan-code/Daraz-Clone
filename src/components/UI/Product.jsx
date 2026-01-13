@@ -3,8 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
 
-const Product = ({}) => {
-  const [productHome,setProductHome] = useState([]);
+const Product = () => { 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const location = useLocation();
@@ -21,8 +20,7 @@ const Product = ({}) => {
       }
     }
     fetching();
-  }, []); 
-
+  }, []);  
     const displayedProducts =
       location.pathname === "/" ? products.slice(0, 4) : products;
 
@@ -34,7 +32,7 @@ const Product = ({}) => {
         displayedProducts.map((product) => (
           <Link
             key={product.id}
-            to={`/product/${product.id}`}
+            to={`/products/${product.id}`}
             id={product.category}
             className="pc-custom-link h-max card-fs-content-body-unit hp-mod-card-hover relative w-40 h-64 md:w-52 md:h-80 lg:w-56 lg:h-96 text-black block no-underline bg-transparent hover:shadow-md cursor-pointer transition-all duration-300 ease-in-out"
           >
@@ -43,7 +41,7 @@ const Product = ({}) => {
               <picture className="inline-flex h-full max-h-full max-w-full w-full">
                 <img
                   src={product.image}
-                  alt={product.description}
+                  alt={product.title}
                   className="inline-block h-full w-full object-contain"
                 />
               </picture>
